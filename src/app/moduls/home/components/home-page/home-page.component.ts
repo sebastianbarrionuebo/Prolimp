@@ -130,7 +130,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
           stagger: 0.2,
           scrollTrigger: {
             trigger: '#animado',  // El elemento que dispara la animación
-            start: 'top 80%',     // Cuando el 80% del elemento está visible en la ventana
+            start: 'top 130%',     // Cuando el 80% del elemento está visible en la ventana
             end: 'bottom 20%',    // Cuando el 20% del elemento ya ha salido de la ventana
           }
         })
@@ -153,7 +153,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
           gsap.from(element, {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
-              start: 'top 80%', // Inicia cuando el elemento está en el 80% de la ventana
+              start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
               end: 'bottom 20%', // Termina cuando el elemento llega al 20% de la ventana
               toggleActions: 'play none none none', // Reproducir solo una vez
             },
@@ -168,7 +168,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
           gsap.from(element, {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
-              start: 'top 80%', // Inicia cuando el elemento está en el 80% de la ventana
+              start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
               end: 'bottom 20%', // Termina cuando el elemento llega al 20% de la ventana
               toggleActions: 'play none none none', // Reproducir solo una vez
             },
@@ -183,7 +183,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
           gsap.from(element, {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
-              start: 'top 80%', // Inicia cuando el elemento está en el 80% de la ventana
+              start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
               end: 'bottom 20%', // Termina cuando el elemento llega al 20% de la ventana
               toggleActions: 'play none none none', // Reproducir solo una vez
             },

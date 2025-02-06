@@ -121,7 +121,7 @@ body, html {
   }
 
   .principal-header {
-    height: 65vh; /* Asegura suficiente espacio */
+    height: 85vh; /* Asegura suficiente espacio */
   }
 
   .button-container button {
@@ -130,7 +130,7 @@ body, html {
 }
 @media (max-width: 425px) {
   .principal-header {
-    height: 55vh; /* Asegura suficiente espacio */
+    height: 75vh; /* Asegura suficiente espacio */
   }
 
   .principal-header h1 {
