@@ -12,7 +12,7 @@ import { filter } from 'rxjs';
 })
 export class HomePageComponent implements AfterViewInit, OnInit {
   showScrollToTop: boolean = false; // Variable para controlar si mostrar el botón
-  missionVisionVisible: boolean = false; // Variable para controlar la visibilidad de la sección Misión, Visión y Valores
+  //missionVisionVisible: boolean = false; // Variable para controlar la visibilidad de la sección Misión, Visión y Valores
 
 
   constructor(
@@ -21,44 +21,18 @@ export class HomePageComponent implements AfterViewInit, OnInit {
     private el: ElementRef,
     private cdr: ChangeDetectorRef,
     @Inject(PLATFORM_ID) private platformId: object
-  ) { }
+  ) {}
 
   // Detectar el evento de scroll
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if (isPlatformBrowser(this.platformId)) {
-
-      // Si el scroll es mayor a 200px, mostramos el botón
-      if (window.pageYOffset > 200) {
-        this.showScrollToTop = true;
-      } else {
-        this.showScrollToTop = false;
-      }
-
-      // Detectar la posición de la sección Misión, Visión y Valores
-      const element = document.querySelector('.mission-vision-valores_titleBg');
-      if (element) {
-        const position = element.getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-          this.missionVisionVisible = true;
-        } else {
-          this.missionVisionVisible = false;
-        }
-      }
-    }
+    this.showScrollToTop = window.pageYOffset > 200;
+    this.cdr.detectChanges(); // Forzar la detección de cambios
   }
 
-
-  @HostListener('window:resize', [])
-  onResize() {
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 100);
-  }
 
   // Función para hacer scroll hacia arriba
   scrollToTop() {
-
     if (isPlatformBrowser(this.platformId)) {
       window.scrollTo({
         top: 0,
@@ -138,9 +112,8 @@ export class HomePageComponent implements AfterViewInit, OnInit {
           stagger: 0.2,
           scrollTrigger: {
             trigger: '#animado',  // El elemento que dispara la animación
-            start: 'top 130%',     // Cuando el 80% del elemento está visible en la ventana
-            end: 'bottom 10%',    // Cuando el 20% del elemento ya ha salido de la ventana
-            markers: true, // 👈 Habilita marcadores para debug
+            start: 'top 80%',     // Cuando el 80% del elemento está visible en la ventana
+            end: 'bottom 20%',    // Cuando el 20% del elemento ya ha salido de la ventana
           }
         })
 
@@ -162,9 +135,9 @@ export class HomePageComponent implements AfterViewInit, OnInit {
           gsap.from(element, {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
-              start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
-              toggleActions: 'play none none reverse', // Reproducir solo una vez
-              markers: true, // 👈 Habilita marcadores para debug
+              start: 'top 80%', // Inicia cuando el elemento está en el 80% de la ventana
+              end: 'bottom 20%', // Termina cuando el elemento llega al 20% de la ventana
+              toggleActions: 'play none none none', // Reproducir solo una vez
             },
             opacity: 0,
             y: 50, // Desplaza hacia abajo 50px
@@ -177,9 +150,9 @@ export class HomePageComponent implements AfterViewInit, OnInit {
           gsap.from(element, {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
-              start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
-              toggleActions: 'play none none reverse', // Reproducir solo una vez
-              markers: true, // 👈 Habilita marcadores para debug
+              start: 'top 80%', // Inicia cuando el elemento está en el 80% de la ventana
+              end: 'bottom 20%', // Termina cuando el elemento llega al 20% de la ventana
+              toggleActions: 'play none none none', // Reproducir solo una vez
             },
             opacity: 0,
             x: 100, // Desplaza hacia la derecha
@@ -192,9 +165,9 @@ export class HomePageComponent implements AfterViewInit, OnInit {
           gsap.from(element, {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
-              start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
-              toggleActions: 'play none none reverse', // Reproducir solo una vez
-              markers: true, // 👈 Habilita marcadores para debug
+              start: 'top 80%', // Inicia cuando el elemento está en el 80% de la ventana
+              end: 'bottom 20%', // Termina cuando el elemento llega al 20% de la ventana
+              toggleActions: 'play none none none', // Reproducir solo una vez
             },
             opacity: 0,
             x: -100, // Desplaza hacia la izquierda
@@ -204,19 +177,19 @@ export class HomePageComponent implements AfterViewInit, OnInit {
 
         // Actualizar ScrollTrigger después de configurar las animaciones
         setTimeout(() => {
-          ScrollTrigger.refresh();// Refrescar las posiciones de los triggers
+          ScrollTrigger.refresh();
         }, 500);
       })
     }
   }
   ngOnDestroy() {
-
     if (isPlatformBrowser(this.platformId)) {
       gsap.killTweensOf('.fade-in');
       gsap.killTweensOf('.fade-right');
       gsap.killTweensOf('.fade-left');
       gsap.killTweensOf('#animado');
       gsap.killTweensOf('.buttonIndex');
+      window.removeEventListener('scroll', this.onWindowScroll.bind(this));
     }
   }
   ngOnInit() {
@@ -228,12 +201,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
         filter(event => event instanceof NavigationEnd)
       ).subscribe(() => {
         this.viewportScroller.scrollToPosition([0, 0]); // Usamos ViewportScroller
-        setTimeout(() => {
-          ScrollTrigger.refresh();// Refrescar las posiciones de los triggers
-          ScrollTrigger.config({
-            ignoreMobileResize: true
-          });
-        }, 500);
+        ScrollTrigger.refresh(); // Refrescar las posiciones de los triggers
       });
 
       // Registramos el plugin ScrollTrigger

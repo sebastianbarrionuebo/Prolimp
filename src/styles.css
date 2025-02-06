@@ -17,7 +17,7 @@
 
 
 
-html, body { height: 100%; overflow-x: hidden; /* Evita el desbordamiento horizontal */ }
+html, body { height: 100%; /*overflow-x: hidden;  Evita el desbordamiento horizontal */ }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .container-fluid {
