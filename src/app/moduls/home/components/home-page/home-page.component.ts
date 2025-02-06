@@ -195,7 +195,6 @@ export class HomePageComponent implements AfterViewInit, OnInit {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.cdr.detectChanges();
-
       // Escuchar eventos de navegación para desplazarse al inicio
       this.router.events.pipe(
         filter(event => event instanceof NavigationEnd)
