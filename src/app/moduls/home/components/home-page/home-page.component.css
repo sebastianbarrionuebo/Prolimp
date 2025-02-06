@@ -99,11 +99,14 @@ body, html {
 
 .principal-header .content h1 {
   font-size: 3rem;
+  /*
   margin-bottom: 1rem;
+  */
 }
 
 .principal-header .content p {
-  font-size: 1.2rem;
+  /*
+  font-size: 1.2rem;*/
   max-width: 800px;
   margin: 0 auto;
 }
@@ -116,9 +119,10 @@ body, html {
 }
 
 @media (max-width: 769px) {
+  /*
   .principal-header h1 {
     font-size: 2rem;
-  }
+  }*/
 
   .principal-header {
     height: 85vh; /* Asegura suficiente espacio */
@@ -132,10 +136,10 @@ body, html {
   .principal-header {
     height: 75vh; /* Asegura suficiente espacio */
   }
-
+  /*
   .principal-header h1 {
     font-size: 1.7rem;
-  }
+  }*/
 
   .principal-container {
     width: 100%; /* Ocupa todo el ancho de la pantalla */
@@ -187,28 +191,30 @@ body, html {
 }
 
 .principal-bg h1 {
-  font-size: 2.2rem;
   margin-bottom: 1rem;
-  /*word-spacing: 0.1em;*/
+  /*
+  font-size: 2.2rem;
+  //word-spacing: 0.1em;
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 800;*/
 }
 
 .principal-bg h2 {
-  font-size: 2rem;
   margin-bottom: 1rem;
-  /*word-spacing: 0.1em;*/
+  /*
+  font-size: 2rem;
+  //word-spacing: 0.1em;
   line-height: 1.1;
-  font-weight: 500;
+  font-weight: 500;*/
 }
 
 .principal-bg p {
-  line-height: 1.6;
-  font-size: 1rem;
   word-spacing: 0.2em;
+  /*
+  font-size: 1rem;
   line-height: 1.4;
-  font-weight: 500;
-}
+  font-weight: 500;*/
+}*/
 
 .principal-companyContenet{
   /* Esto */
@@ -264,14 +270,14 @@ body, html {
   .principal-bg {
     padding: 1.5rem;
   }
-
+  /*
   .principal-bg h2 {
     font-size: 1.5rem;
-  }
-
+  }*/
+  /*
   .principal-bg p {
     font-size: 0.9rem;
-  }
+  }*/
 
   .button-container {
     gap: 0.5rem; /* Reduce el espacio entre botones en pantallas pequeñas */
@@ -334,18 +340,18 @@ body, html {
     padding-left: 3em;
     padding-right: 3em;
   }
-
+  /*
   .principal-bg h1 {
     font-weight: 500;
-  }
-
+  }*/
+  /*
   .principal-bg p {
     line-height: 1.6;
     font-size: 1.5rem;
     word-spacing: 0.2em;
     line-height: 1.4;
     font-weight: 500;
-  }
+  }*/
 
   .principal-companyContenet {
     width: 100%; /* Asegura que la primera columna ocupe el 100% del ancho */
@@ -423,10 +429,10 @@ body, html {
 
 .servis_title {
   padding: 3em 0em;
+  /*
   color: white;
   font-size: 40px;
-  font-weight: 700;
-  color: white;
+  font-weight: 700;*/
 }
 
 .servis_itemsContainer {
@@ -443,9 +449,11 @@ body, html {
 .servis_itemsContainer p{
   padding: 1em 0em;
   text-align: left;
+  /*
   font-size: 1.7em;
   line-height: 1.5;
   font-weight: 300;
+  */
   color: white;
 }
 
@@ -460,9 +468,10 @@ body, html {
 }
 
 @media (max-width: 1025px) {
+  /*
   p{
     font-size: 2em;
-  }
+  }*/
 }
 
 @media (max-width: 425px) {
@@ -471,14 +480,14 @@ body, html {
     padding-left: 5em;
     text-align: center;
   }
-
+  /*
   .servis_title {
     font-size: 35px;
-  }
-
+  }*/
+  /*
   .servis_itemsContainer p{
     font-size: 1.7em;
-  }
+  }*/
 }
 
 @media (max-width: 320px) {
@@ -536,41 +545,43 @@ body, html {
   margin: 0;
   padding: 4em 15em 15em;
 }
-
 .metodo-trabajo_title{
   padding: 2em 0em;
-  color: white;
+   /*
   font-size: 40px;
   font-weight: 700;
+  */
   color: rgb(57, 57, 223);
 }
 
 .metodo-trabajo_itemTitle{
   padding-top: 2em;
+   /*
   font-size: 2em;
+   */
   color: rgb(57, 57, 223);
 }
 
 .metodo-trabajo_item{
   padding: 1em 3em;
 }
-
+/*
 .metodo-trabajo_item p {
   line-height: 1.6;
   font-size: 1.7em;
   word-spacing: 0.2em;
   line-height: 1.4;
-}
+}*/
 
 @media (max-width: 480px) {
   .metodo-trabajo {
     padding: 1em 0em;
     margin: 0.3em;
   }
-
+  /*
   .metodo-trabajo_title{
     font-size: 35px;
-  }
+  }*/
 
   .metodo-trabajo_pasos{
     padding: 2em 2em;
@@ -579,10 +590,10 @@ body, html {
   .metodo-trabajo_item{
     padding: 1em 1em;
   }
-
+  /*
   .mission-vision-valores_itemContent p{
     font-size: 2em;
-  }
+  }*/
 
 }
 
@@ -640,8 +651,10 @@ body, html {
 }
 
 .mission-vision-valores_title {
+  /*
   font-size: 40px;
   font-weight: 700;
+  */
   color: white;
 }
 
@@ -660,10 +673,12 @@ body, html {
 
 .mission-vision-valores_itemTitle {
   text-align: center;
-  font-size: 2.2em;
+  /*
+  font-size: 2.2em;*/
   /*word-spacing: 0.1em;*/
+  /*
   line-height: 1.1;
-  font-weight: 900;
+  font-weight: 900;*/
   color: white;
   margin: 1em 0em;
   padding: 0.5em 0em;
@@ -695,9 +710,11 @@ body, html {
 
 .mission-vision-valores p {
   text-align: justify; /* Centra texto */
+  /*
   font-size: 1.4em;
   line-height: 1.5;
   font-weight: 300;
+  */
   color: white;
 }
 
@@ -722,11 +739,11 @@ body, html {
   .mission-vision-valores_itemContent {
     padding: 2em 2em;
   }
-
+  /*
   .mission-vision-valores_itemContent p{
     text-align: center;
     font-size: 22px;
-  }
+  }*/
 
   .mission-vision-valores_contenido {
     flex-direction: column; /* En pantallas pequeñas, los elementos se apilan */
