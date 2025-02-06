@@ -48,6 +48,14 @@ export class HomePageComponent implements AfterViewInit, OnInit {
     }
   }
 
+
+  @HostListener('window:resize', [])
+  onResize() {
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+  }
+
   // Función para hacer scroll hacia arriba
   scrollToTop() {
 
@@ -191,7 +199,9 @@ export class HomePageComponent implements AfterViewInit, OnInit {
         });
 
         // Actualizar ScrollTrigger después de configurar las animaciones
-        ScrollTrigger.refresh();
+        setTimeout(() => {
+          ScrollTrigger.refresh();// Refrescar las posiciones de los triggers
+        }, 100);
       })
     }
   }
@@ -214,7 +224,9 @@ export class HomePageComponent implements AfterViewInit, OnInit {
         filter(event => event instanceof NavigationEnd)
       ).subscribe(() => {
         this.viewportScroller.scrollToPosition([0, 0]); // Usamos ViewportScroller
-        ScrollTrigger.refresh(); // Refrescar las posiciones de los triggers
+        setTimeout(() => {
+          ScrollTrigger.refresh();// Refrescar las posiciones de los triggers
+        }, 100);
       });
 
       // Registramos el plugin ScrollTrigger
