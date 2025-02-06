@@ -63,6 +63,7 @@ export class ContactoPageComponent {
           });
           dialogRef.afterClosed().subscribe({
             next: (result: any) => {
+              document.body.style.overflow = 'auto';
               this.contactForm.reset();
               console.log('El cuadro de diálogo se cerró:', result);
             }
@@ -76,6 +77,7 @@ export class ContactoPageComponent {
           });
           dialogRef.afterClosed().subscribe({
             next: (result: any) => {
+              document.body.style.overflow = 'auto';
               console.log('El cuadro de diálogo se cerró:', result);
             }
           });

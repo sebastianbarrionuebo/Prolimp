@@ -50,19 +50,13 @@
 }
 @media (max-width: 425px) {
   .principal-header {
+    background-position: center; /* Centra la imagen */
+    background-attachment: local; /* Fija la imagen al viewport */
     height: 75vh; /* Asegura suficiente espacio */
   }
 
   .principal-header_title {
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .principal-header {
-    background-position: center; /* Centra la imagen */
-    background-attachment: local; /* Fija la imagen al viewport */
-    height: 45vh; /* Asegura suficiente espacio */
+    font-size: 42px !important;
   }
 }
 

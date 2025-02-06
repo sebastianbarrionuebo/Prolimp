@@ -633,7 +633,7 @@ body, html {
   background-size: cover; /* La imagen cubre todo el contenedor */
   background-position: center; /* Centra la imagen */
   background-attachment: fixed; /* Fija la imagen al viewport */
-  height: 20vh; /* Asegura suficiente espacio */
+  height: 15vh; /* Asegura suficiente espacio */
   display: flex; /* Para centrar contenido */
   flex-direction: column; /* Coloca el logo y los botones en una columna */
   justify-content: center; /* Centra verticalmente */
@@ -664,17 +664,10 @@ body, html {
 
 .mission-vision-valores_itemTitle {
   text-align: center;
-  /*
-  font-size: 2.2em;*/
-  /*word-spacing: 0.1em;*/
-  /*
-  line-height: 1.1;
-  font-weight: 900;*/
   color: white;
   margin: 1em 0em;
   padding: 0.5em 0em;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); /* Oscurece la imagen con un overlay */
-  /*color: #184B73;*/
 }
 
 .matIcon_size{
@@ -701,21 +694,10 @@ body, html {
 
 .mission-vision-valores p {
   text-align: justify; /* Centra texto */
-  /*
-  font-size: 1.4em;
-  line-height: 1.5;
-  font-weight: 300;
-  */
   color: white;
 }
 
 /* Responsividad */
-/* @media (max-width: 1440px) {
-  .mission-vision-valores_item {
-    height: 70em;
-  }
-}*/
-
 @media (max-width: 1024px) {
   .mission-vision-valores_height {
     height: 50em;
@@ -730,11 +712,6 @@ body, html {
   .mission-vision-valores_itemContent {
     padding: 2em 2em;
   }
-  /*
-  .mission-vision-valores_itemContent p{
-    text-align: center;
-    font-size: 22px;
-  }*/
 
   .mission-vision-valores_contenido {
     flex-direction: column; /* En pantallas pequeñas, los elementos se apilan */
@@ -751,6 +728,10 @@ body, html {
   }
 }
 @media (max-width: 425px) {
+
+  .mission-vision-valores_titleBg {
+    height: 10vh;
+  }
   .mission-vision-valores_contenido {
     padding: 4em 1em;
   }
@@ -765,7 +746,14 @@ body, html {
   }
 
   .mission-vision-valores_content {
-    padding: 2em 2em;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a vertical */
+    align-items: center; /* Asegura que los elementos estén centrados */
+    padding: 2em 1em;
+  }
+
+  .mission-vision-valores_item {
+    width: 100%; /* Asegura que cada item ocupe todo el ancho disponible */
   }
 }
 
