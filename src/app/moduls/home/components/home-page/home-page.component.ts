@@ -140,6 +140,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
             trigger: '#animado',  // El elemento que dispara la animación
             start: 'top 130%',     // Cuando el 80% del elemento está visible en la ventana
             end: 'bottom 10%',    // Cuando el 20% del elemento ya ha salido de la ventana
+            markers: true, // 👈 Habilita marcadores para debug
           }
         })
 
@@ -163,6 +164,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
               trigger: element, // Elemento que dispara la animación
               start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
               toggleActions: 'play none none reverse', // Reproducir solo una vez
+              markers: true, // 👈 Habilita marcadores para debug
             },
             opacity: 0,
             y: 50, // Desplaza hacia abajo 50px
@@ -177,6 +179,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
               trigger: element, // Elemento que dispara la animación
               start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
               toggleActions: 'play none none reverse', // Reproducir solo una vez
+              markers: true, // 👈 Habilita marcadores para debug
             },
             opacity: 0,
             x: 100, // Desplaza hacia la derecha
@@ -191,6 +194,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
               trigger: element, // Elemento que dispara la animación
               start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
               toggleActions: 'play none none reverse', // Reproducir solo una vez
+              markers: true, // 👈 Habilita marcadores para debug
             },
             opacity: 0,
             x: -100, // Desplaza hacia la izquierda
@@ -201,7 +205,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
         // Actualizar ScrollTrigger después de configurar las animaciones
         setTimeout(() => {
           ScrollTrigger.refresh();// Refrescar las posiciones de los triggers
-        }, 100);
+        }, 500);
       })
     }
   }
@@ -226,7 +230,10 @@ export class HomePageComponent implements AfterViewInit, OnInit {
         this.viewportScroller.scrollToPosition([0, 0]); // Usamos ViewportScroller
         setTimeout(() => {
           ScrollTrigger.refresh();// Refrescar las posiciones de los triggers
-        }, 100);
+          ScrollTrigger.config({
+            ignoreMobileResize: true
+          });
+        }, 500);
       });
 
       // Registramos el plugin ScrollTrigger
