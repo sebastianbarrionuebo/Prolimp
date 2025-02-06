@@ -154,8 +154,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
               start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
-              end: 'bottom 10%', // Termina cuando el elemento llega al 20% de la ventana
-              toggleActions: 'play none none none', // Reproducir solo una vez
+              toggleActions: 'play none none reverse', // Reproducir solo una vez
             },
             opacity: 0,
             y: 50, // Desplaza hacia abajo 50px
@@ -169,8 +168,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
               start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
-              end: 'bottom 10%', // Termina cuando el elemento llega al 20% de la ventana
-              toggleActions: 'play none none none', // Reproducir solo una vez
+              toggleActions: 'play none none reverse', // Reproducir solo una vez
             },
             opacity: 0,
             x: 100, // Desplaza hacia la derecha
@@ -184,8 +182,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
             scrollTrigger: {
               trigger: element, // Elemento que dispara la animación
               start: 'top 130%', // Inicia cuando el elemento está en el 80% de la ventana
-              end: 'bottom 10%', // Termina cuando el elemento llega al 20% de la ventana
-              toggleActions: 'play none none none', // Reproducir solo una vez
+              toggleActions: 'play none none reverse', // Reproducir solo una vez
             },
             opacity: 0,
             x: -100, // Desplaza hacia la izquierda
