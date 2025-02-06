@@ -1,0 +1,290 @@
+
+
+footer {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto en blanco */
+  text-align: center; /* Centrar el texto */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-titleContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Espacio entre el logo y el nombre */
+  transition: transform 0.3s ease; /* Transición suave para el agrandado */
+  padding: 2em 0em;
+}
+.footer-logo {
+  height: 50px; /* Ajusta el tamaño del logo */
+  width: auto; /* Mantiene la proporción del logo */
+}
+.footer-titleContainer:hover {
+  transform: scale(1.1);
+  /* Aumenta el tamaño de todo el contenedor */
+}
+
+hr {
+  border-color: rgba(255, 255, 255);
+}
+
+footer h1 {
+  font-size: 2rem; /* Tamaño del logo */
+  margin-bottom: 1rem;
+}
+
+footer h3 {
+  font-size: 1.5rem; /* Tamaño de los títulos */
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Espacio entre el ícono y el texto */
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+footer mat-icon {
+  color: #ffcc00; /* Color del ícono */
+  font-size: 1.2rem; /* Tamaño del ícono */
+}
+
+.footer-btnContainer {
+  padding: 4em 5em;
+}
+
+.footer-btnContainer button {
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.footer-btnContainer button:hover {
+  background-color: rgb(0,0,0,0.3);
+}
+
+
+
+footer .asist-container{
+  margin: 0;
+  padding: 1.5em 0em;
+}
+
+footer .asist-container .btn {
+  margin-top: 1rem; /* Espaciado del botón */
+  background-color: #ffcc00; /* Color del botón */
+  color: #333; /* Color del texto del botón */
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+footer .asist-container .btn:hover {
+  background-color: #ff9900; /* Cambio de color al pasar el mouse */
+  color: white;
+}
+
+@media (max-width: 768px) {
+  footer .row {
+    flex-direction: column; /* Apila las columnas en pantallas pequeñas */
+  }
+
+  footer .col {
+    margin-bottom: 1.5rem; /* Espaciado entre las secciones */
+  }
+}
+
+
+/* Seccion Contacto */
+.footer-contactContainer {
+  display: flex; /* Para centrar contenido */
+  width: 100%;
+  height: 100%;
+  flex-direction: column; /* Coloca el logo y los botones en una columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+}
+.footer-contactContainer_title {
+  text-align: center;
+  /*word-spacing: 0.1em;*/
+  padding-top: 1em;
+  font-size: 2.5em !important;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.footer-contactContainer_options{
+  padding: 1.5em 0;
+}
+
+.footer-contactContainer_options div{
+  padding: 0.5em 0;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.social-buttons_icon {
+  font-size: 2rem; /* Tamaño del ícono */
+  color: #c3cde2; /* Color de Facebook */
+}
+
+
+
+
+/* Animación de gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Estilo del footer con gradiente animado */
+.animacion-bg {
+  margin: 0;
+  padding: 2em 0em !important;
+  background: linear-gradient(90deg, #1e3c72, #2a5298, #004e92, #0f2b5e);
+  background-size: 200% 200%; /* Tamaño más grande para notar el movimiento */
+  animation: gradientAnimation 3s ease infinite; /* Duración más corta para hacer la animación más visible */
+  color: white; /* Texto en blanco */
+  padding: 2rem 1rem; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+}
+
+
+
+@media (max-width: 768px) {
+  .col-md-8 {
+    width: 100% !important;
+  }
+  .col-md-4 {
+    width: 100% !important;
+  }
+
+  footer .row {
+    flex-direction: column; /* Apila las columnas en pantallas pequeñas */
+    padding: 0 1rem; /* Espaciado horizontal */
+  }
+
+  footer .col {
+    margin-bottom: 1.5rem; /* Espaciado entre las secciones */
+  }
+
+  /* Ajustar el tamaño del logo */
+  .footer-logo {
+    height: 40px; /* Logo más pequeño en pantallas pequeñas */
+  }
+
+  /* Ajustar el tamaño de los títulos */
+  footer h1 {
+    font-size: 1.5rem;
+  }
+
+  footer h3 {
+    font-size: 2.3em !important;
+  }
+
+  /* Ajustar el tamaño de los íconos */
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  footer mat-icon, .social-buttons_icon {
+    font-size: 1.5rem; /* Tamaño de los íconos más pequeño */
+  }
+
+  .social-buttons {
+    gap: 1rem;
+  }
+
+  .social-buttons button {
+    font-size: 1.5rem; /* Tamaño de los botones más pequeño */
+  }
+
+  .footer-btnContainer {
+    padding: 2em 2em; /* Reducir el espaciado */
+  }
+
+  .footer-btnContainer button {
+    font-size: 16px; /* Tamaño más pequeño para botones */
+  }
+
+  .asist-container .btn {
+    font-size: 1rem; /* Botón más pequeño */
+  }
+
+  .footer-contactContainer_options {
+    padding: 1em 0;
+  }
+
+  /* Ajuste del espaciado del contenedor de contacto */
+  .footer-contactContainer {
+    padding: 1.5em 0;
+  }
+
+  /* Hacer los botones de contacto más grandes */
+  .social-buttons button:hover {
+    transform: scale(1.2); /* Efecto de hover más sutil */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción del logo */
+  }
+  footer h1 {
+    font-size: 3rem; /* Tamaño del logo */
+    margin-bottom: 1rem;
+  }
+  .footer-btnContainer button {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    /*word-spacing: 0.1em;*/
+    line-height: 1.1;
+    font-weight: 800;
+  }
+}
+@media (max-width: 425px) {
+  .footer-btnContainer{
+    padding: 0em !important;
+  }
+  .row>* {
+    padding-right: 0em !important;
+    padding-left: 0em !important;
+  }
+}
+
+
+
+

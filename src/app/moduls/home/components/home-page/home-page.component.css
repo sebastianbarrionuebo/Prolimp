@@ -1,0 +1,875 @@
+/* Reinicio de márgenes y padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Incluye bordes y padding en el tamaño total */
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+/* Contenedor principal */
+.principal-container {
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  padding: 0;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo de la cabecera */
+.principal-header {
+  background-image: url('/assets/header-background.jpg'); /* Ruta a tu imagen */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen al viewport */
+  height: 95vh; /* Asegura suficiente espacio */
+  display: flex; /* Para centrar contenido */
+  flex-direction: column; /* Coloca el logo y los botones en una columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra texto */
+  color: white;
+  padding: 2rem;
+  box-shadow: inset 0 0 0 1000px rgba(25, 34, 59, 0.5); /* Oscurece la imagen con un overlay */
+}
+
+/* Logo */
+.logo {
+  max-width: 600px; /* Tamaño máximo del logo */
+  margin-bottom: 1rem; /* Espaciado inferior del logo */
+}
+
+/* Contenedor de botones */
+.button-container {
+  display: flex; /* Flexbox para alinear botones horizontalmente */
+  padding: 3em 0em;
+  gap: 1rem; /* Espaciado entre botones */
+  flex-wrap: wrap; /* Permite que los botones pasen a la siguiente línea si no caben */
+  justify-content: center; /* Centra los botones horizontalmente */
+}
+
+.button-container button {
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 30px;
+  width: 13em;
+  height: 3em;
+  color: white;
+  cursor: pointer;
+  position: relative; /* Necesario para ::after */
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  background-color: rgb(35,113,176,0.7);
+}
+
+.button-container button:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+.button-container button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 69, 136); /* Color de fondo final */
+  transform: translateY(100%); /* Lo mantenemos oculto */
+  transition: transform 1s ease-in-out;
+  opacity: 0; /* Completamente invisible al inicio */
+  z-index: -1; /* Se mantiene detrás del botón */
+}
+
+.button-container button:hover::after {
+  transform: translateY(0); /* Aparece desde abajo */
+  opacity: 1; /* Se vuelve visible gradualmente */
+}
+
+.principal-header .content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.principal-header .content p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsivo para pantallas*/
+@media (max-width: 1440px) {
+  .button-container button {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .principal-header h1 {
+    font-size: 2rem;
+  }
+
+  .principal-header {
+    height: 65vh; /* Asegura suficiente espacio */
+  }
+
+  .button-container button {
+    font-size: 1.5rem !important;
+  }
+}
+@media (max-width: 425px) {
+  .principal-header {
+    height: 55vh; /* Asegura suficiente espacio */
+  }
+
+  .principal-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .principal-container {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fondo del contenido principal */
+.principal-bg {
+  /*background-color: rgba(0, 18, 51, 0.7); Fondo semi-transparente */
+  /* Esto */
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  background-color: rgb(0, 38, 100); /* Fondo semi-transparente */
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  border-end-end-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.principal-bg h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  /*word-spacing: 0.1em;*/
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.principal-bg h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  /*word-spacing: 0.1em;*/
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.principal-bg p {
+  line-height: 1.6;
+  font-size: 1rem;
+  word-spacing: 0.2em;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.principal-companyContenet{
+  /* Esto */
+  width: 35%; /* Ajusta el tamaño */
+  height: auto;
+  padding-right: 20px;
+}
+
+.principal_itemContainer {
+  display: flex;
+  gap: 1em;
+  padding: 0 1em;
+
+  /* Esto */
+  width: 60%;
+  padding-left: 20px;
+  position: relative;
+}
+.principal_itemContainer::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* Ajusta la posición de la línea */
+  top: 0;
+  width: 3px; /* Grosor de la línea */
+  height: 100%; /* Que cubra toda la altura */
+  background-color: #ccc; /* Color de la línea */
+}
+
+.principal_item{
+  display: flex; /* Para centrar contenido */
+  flex-direction: column; /* Coloca el logo y los botones en una columna */
+  justify-content: flex-start;
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra texto */
+  gap: 10px; /* Espaciado entre icono y texto */
+}
+
+.principal_item-iconContainer {
+  width: 80px; /* Ajusta según necesidad */
+  height: 80px; /* Ajusta según necesidad */
+}
+
+.matIcon {
+  font-size: 3.7rem; /* Aumenta el tamaño del ícono */
+  width: auto; /* Ajusta automáticamente el ancho */
+  height: auto; /* Ajusta automáticamente la altura */
+  color: white; /* (Opcional) Cambia el color del ícono */
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .principal-bg {
+    padding: 1.5rem;
+  }
+
+  .principal-bg h2 {
+    font-size: 1.5rem;
+  }
+
+  .principal-bg p {
+    font-size: 0.9rem;
+  }
+
+  .button-container {
+    gap: 0.5rem; /* Reduce el espacio entre botones en pantallas pequeñas */
+  }
+
+  .button-container button {
+    font-size: 1rem; /* Reduce el tamaño del texto */
+    padding: 0.4rem 0.8rem;
+  }
+}
+@media (max-width: 425px) {
+  .logo {
+    width: 280px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+
+  .button-container button {
+    font-size: 1rem;
+    width: 13em;
+    height: 2.5em;
+  }
+}
+
+
+
+/* Animación de aparición para el logo */
+.logo {
+  opacity: 0; /* El logo comienza invisible */
+  animation: fadeInLogo 3s forwards; /* Aplicar la animación fadeIn durante 3 segundos */
+}
+
+/* Animación del logo */
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animación para los botones */
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Responsivo para pantallas con ancho menor a 1450px */
+@media (max-width: 1450px) {
+  .principal-bg {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    align-items: center; /* Centra las columnas */
+    padding-top: 2rem; /* Ajusta el padding si es necesario */
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .principal-bg h1 {
+    font-weight: 500;
+  }
+
+  .principal-bg p {
+    line-height: 1.6;
+    font-size: 1.5rem;
+    word-spacing: 0.2em;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .principal-companyContenet {
+    width: 100%; /* Asegura que la primera columna ocupe el 100% del ancho */
+    margin-bottom: 2rem; /* Espacio entre las columnas */
+    padding-right: 0; /* Elimina el padding derecho */
+    padding-bottom: 3em;
+  }
+
+  .principal_itemContainer {
+    display: flex;
+    flex-direction: column; /* Coloca las columnas de manera vertical */
+    gap: 1em;
+    width: 100%; /* Asegura que la segunda columna ocupe el 100% del ancho */
+    padding-left: 0;
+    position: relative; /* Necesario para la línea que vamos a agregar */
+  }
+
+  /* Línea entre los contenedores */
+  .principal_itemContainer::before {
+    content: "";
+    position: absolute;
+    top: -1rem; /* Coloca la línea en la parte superior */
+    left: 0;
+    right: 0;
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: #ccc; /* Color de la línea */
+    margin-bottom: 1rem; /* Espacio entre la línea y los elementos */
+    width: 100%; /* La línea ocupa todo el ancho */
+  }
+
+  .principal_item {
+    width: 100%; /* Hace que cada item ocupe el 100% del ancho disponible */
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Nuestros Servicios */
+.servis_container {
+  /*https://depositphotos.com/photos/limpieza.html?filter=all&qview=34294849*/
+  background-image: url('/assets/depositphotos.jpg'); /* Ruta a tu imagen */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen al viewport */
+  box-shadow: inset 0 0 0 1000px rgba(25, 34, 59, 0.7); /* Oscurece la imagen con un overlay */
+  margin: 0;
+  padding: 0;
+}
+
+.servis_title {
+  padding: 3em 0em;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.servis_itemsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se ajusta según el tamaño de la pantalla */
+  gap: 7rem; /* Espaciado entre tarjetas */
+  margin: 0;
+  vertical-align: baseline;
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-bottom: 15em;
+}
+
+.servis_itemsContainer p{
+  padding: 1em 0em;
+  text-align: left;
+  font-size: 1.7em;
+  line-height: 1.5;
+  font-weight: 300;
+  color: white;
+}
+
+
+/* Responsivo para pantallas */
+@media (max-width: 1450px) {
+  .servis_itemsContainer {
+    gap: 1rem;
+    padding-left: 7em;
+    padding-right: 7em;
+  }
+}
+
+@media (max-width: 1025px) {
+  p{
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 425px) {
+  .servis_itemsContainer {
+    gap: 0rem;
+    padding-left: 5em;
+    text-align: center;
+  }
+
+  .servis_title {
+    font-size: 35px;
+  }
+
+  .servis_itemsContainer p{
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 320px) {
+  .servis_itemsContainer {
+    gap: 0rem;
+    padding-left: 2em;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Metodo de Trabajo */
+.metodo-trabajo {
+  background-image: url('/assets/bgclean.jpg'); /* Ruta a tu imagen */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  display: flex; /* Para centrar contenido */
+  flex-direction: column; /* Coloca el logo y los botones en una columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra texto */
+  padding-top: 8em;
+}
+
+.metodo-trabajo_pasos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se ajusta según el tamaño de la pantalla */
+  gap: 2rem; /* Espaciado entre tarjetas */
+  margin: 0;
+  padding: 4em 15em 15em;
+}
+
+.metodo-trabajo_title{
+  padding: 2em 0em;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(57, 57, 223);
+}
+
+.metodo-trabajo_itemTitle{
+  padding-top: 2em;
+  font-size: 2em;
+  color: rgb(57, 57, 223);
+}
+
+.metodo-trabajo_item{
+  padding: 1em 3em;
+}
+
+.metodo-trabajo_item p {
+  line-height: 1.6;
+  font-size: 1.7em;
+  word-spacing: 0.2em;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .metodo-trabajo {
+    padding: 1em 0em;
+    margin: 0.3em;
+  }
+
+  .metodo-trabajo_title{
+    font-size: 35px;
+  }
+
+  .metodo-trabajo_pasos{
+    padding: 2em 2em;
+  }
+
+  .metodo-trabajo_item{
+    padding: 1em 1em;
+  }
+
+  .mission-vision-valores_itemContent p{
+    font-size: 2em;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Misión, Visión y Valores */
+.mission-vision-valores {
+  margin: 0;
+  padding: 0;
+}
+
+.mission-vision-valores_titleBg {
+  background-image: url('/assets/nosotros.jpg'); /* Ruta a tu imagen */
+  box-shadow: inset 0 0 0 1000px rgba(25, 34, 59, 0.5); /* Oscurece la imagen con un overlay */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen al viewport */
+  height: 20vh; /* Asegura suficiente espacio */
+  display: flex; /* Para centrar contenido */
+  flex-direction: column; /* Coloca el logo y los botones en una columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra texto */
+}
+
+.mission-vision-valores_title {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.mission-vision-valores_content {
+  gap: 2rem;
+  padding: 10em 10em 10em;
+}
+
+.mission-vision-valores_item {
+  background-color: #008af3;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); /* Oscurece la imagen con un overlay */
+  border-radius: 1%;
+  padding: 0 !important;
+  /*height: 25em;*/
+}
+
+.mission-vision-valores_itemTitle {
+  text-align: center;
+  font-size: 2.2em;
+  /*word-spacing: 0.1em;*/
+  line-height: 1.1;
+  font-weight: 900;
+  color: white;
+  margin: 1em 0em;
+  padding: 0.5em 0em;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); /* Oscurece la imagen con un overlay */
+  /*color: #184B73;*/
+}
+
+.matIcon_size{
+  font-size: 8rem; /* Aumenta el tamaño del ícono */
+  width: auto; /* Ajusta automáticamente el ancho */
+  height: auto; /* Ajusta automáticamente la altura */
+  color: white; /* (Opcional) Cambia el color del ícono */
+  padding: 0.2em 0em;
+}
+
+.mission-vision-valores_itemContent {
+  display: flex; /* Para centrar contenido */
+  flex-direction: column; /* Coloca el logo y los botones en una columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: justify; /* Centra texto */
+  padding: 2em 5em;
+}
+
+.mission-vision-valores .col {
+  flex: 1; /* Permite que cada columna ocupe un espacio proporcional */
+  padding: 1rem;
+}
+
+.mission-vision-valores p {
+  text-align: justify; /* Centra texto */
+  font-size: 1.4em;
+  line-height: 1.5;
+  font-weight: 300;
+  color: white;
+}
+
+/* Responsividad */
+/* @media (max-width: 1440px) {
+  .mission-vision-valores_item {
+    height: 70em;
+  }
+}*/
+
+@media (max-width: 1024px) {
+  .mission-vision-valores_height {
+    height: 50em;
+  }
+}
+@media (max-width: 768px) {
+  .mission-vision-valores_content {
+    gap: 2rem;
+    padding: 10em 5em;
+  }
+
+  .mission-vision-valores_itemContent {
+    padding: 2em 2em;
+  }
+
+  .mission-vision-valores_itemContent p{
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .mission-vision-valores_contenido {
+    flex-direction: column; /* En pantallas pequeñas, los elementos se apilan */
+    align-items: center;
+  }
+
+  .mission-vision-valores_contenido .col {
+    max-width: 100%; /* Asegura que las columnas ocupen todo el ancho disponible */
+    margin-bottom: 2rem;
+  }
+
+  .mission-vision-valores_height {
+    height: 80em;
+  }
+}
+@media (max-width: 425px) {
+  .mission-vision-valores_contenido {
+    padding: 4em 1em;
+  }
+
+  .mission-vision-valores_height {
+    height: 60em;
+    width: 60em;
+  }
+
+  .mission-vision-valores {
+    padding: 5em 0em;
+  }
+
+  .mission-vision-valores_content {
+    padding: 2em 2em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor de los botones flotantes */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 80px; /* Ajusta para que no se superponga con la flecha */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25D366; /* Color verde de WhatsApp */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-button img {
+  width: 70%;
+  height: 70%;
+}
+
+.whatsapp-button:hover {
+  background-color: #1DA851; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.2); /* Efecto de agrandamiento */
+}
+
+
+/* Estilos para el botón de flecha */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(23, 77, 143);
+  color: white;
+  font-size: 30px;
+  border: none;
+  display: block !important; /* Asegura que el botón sea visible para depuración */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: rgb(0, 60, 134); /* Cambia de color cuando se pasa el mouse */
+  transform: scale(1.2); /* Efecto de agrandamiento */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

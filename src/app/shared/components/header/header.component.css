@@ -1,0 +1,461 @@
+/* Ajuste del contenido debajo del header */
+body {
+  padding-top: 80px;
+  /* Añade espacio en la parte superior para que el contenido no se solape con el header fijo */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+  /* Fija el header en la parte superior */
+  top: 0;
+  /* Se mantiene en la parte superior */
+  left: 0;
+  /* Se mantiene alineado a la izquierda */
+  width: 100%;
+  /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000;
+  /* Asegura que el header quede por encima de otros elementos */
+  background: rgba(129, 136, 231, 0.5);
+  /* Fondo semi-transparente */
+
+  background-color: rgba(93, 93, 182, 0.7);
+  /* Fondo semi-transparente */
+  transition: background-color 0.3s ease;
+  /* Inicialmente no está fijo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  /* Sombra sutil para darle más énfasis */
+
+}
+
+/* Contenedor del logo y el nombre de la empresa */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Espacio entre el logo y el nombre */
+  transition: transform 0.3s ease;
+  /* Transición suave para el agrandado */
+}
+
+.logo-image {
+  height: 50px;
+  /* Ajusta el tamaño del logo */
+  width: auto;
+  /* Mantiene la proporción del logo */
+}
+
+.company-name {
+  font-size: 1.5rem;
+  /* Tamaño del nombre de la empresa */
+  margin: 0;
+  /* Elimina márgenes adicionales */
+  color: white;
+  /* Asegura que el texto sea visible */
+  cursor: pointer;
+  /* Indica que es clickeable */
+  transition: color 0.3s ease;
+  /* Transición suave para el cambio de color */
+}
+
+/* Efecto de agrandado al pasar el mouse */
+.logo-container:hover {
+  transform: scale(1.1);
+  /* Aumenta el tamaño de todo el contenedor */
+}
+
+.company-name:hover {
+  /*color: #48ff00;*/
+  color: white;
+  /* Cambia el color al pasar el mouse */
+}
+
+
+.sticky-header {
+  position: fixed !important;
+  /* Fija el header */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Fondo oscuro cuando se hace scroll */
+  z-index: 1000;
+  /* Asegura que el header quede encima de otros elementos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  /* Sombra sutil para darle más énfasis */
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.navbar button {
+  color: white;
+  text-transform: none;
+  margin: 0 0.5rem;
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 19px;
+  cursor: pointer;
+  overflow: hidden;
+  /* Asegura que la animación no sobresalga */
+  transition: color 0.3s ease;
+  /* Suaviza el cambio de color del texto */
+}
+
+.navbar button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  /* Comienza con la barra oculta */
+  height: 2px;
+  /* Grosor de la barra */
+  /* background-color: #2eff05;*/
+  background-color: white;
+  /* Color de la barra */
+  transition: width 0.3s ease;
+  /* Suaviza la animación de ancho */
+}
+
+.navbar button:hover {
+  /*color: #59ec4c;*/
+  color: white;
+  /* Cambia el color del texto al pasar el mouse */
+}
+
+.navbar button:hover::after {
+  width: 100%;
+  /* La barra se expande completamente */
+}
+
+.navbar button.mat-button {
+  position: relative;
+  background: none;
+  border: none;
+  color: #ffffff !important;
+  /* Asegura que el color del texto sea blanco */
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  /* Asegura que la animación no sobresalga */
+  transition: color 0.3s ease;
+  /* Suaviza el cambio de color del texto */
+}
+
+.navbar button.mat-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  /* Comienza con la barra oculta */
+  height: 2px;
+  /* Grosor de la barra */
+  /*background-color: #65ec53;*/
+  background-color: white;
+  /* Color de la barra */
+  transition: width 0.3s ease;
+  /* Suaviza la animación de ancho */
+}
+
+.navbar button.mat-button:hover {
+  color: #9a8ffd !important;
+  /* Cambia el color del texto al pasar el mouse */
+}
+
+.navbar button.mat-button:hover::after {
+  width: 100%;
+  /* La barra se expande completamente */
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+
+/* Estilo para los items dentro del mat-menu */
+/* Contenedor principal */
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-container:hover .dropdown-menu {
+  /* ----------------------------------------- */
+  display: block;
+  /* Hace visible el menú */
+}
+
+/* Estilo del botón de menú */
+.menu-button {
+  background-color: rgba(93, 93, 182, 0.7);
+  color: white;
+  /* padding: 10px 20px;*/
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-button:hover {
+  /*background-color: #2eff05;*/
+  background-color: white;
+  /* Color de fondo cuando se pasa el mouse */
+  color: #fff;
+}
+
+
+/* Estilo del menú desplegable */
+.dropdown-menu {
+  /* ----------------------------------------- */
+  display: none;
+  position: absolute;
+  top: 100%;
+  /* Coloca el menú justo debajo del botón */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.575);
+  min-width: 200px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin-top: 0;
+  /* Sin margen extra */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+/* Estilo para los enlaces dentro del dropdown */
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px 0;
+  position: relative;
+  /* Necesario para el pseudo-elemento */
+  overflow: hidden;
+  /* Asegura que la animación no sobresalga */
+  transition: color 0.3s ease;
+  /* Suaviza el cambio de color del texto */
+}
+
+.dropdown-menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  /* Comienza con la barra oculta */
+  height: 2px;
+  /* Grosor de la barra */
+  /*background-color: #2eff05;*/
+  background-color: white;
+  /* Color de la barra */
+  transition: width 0.3s ease;
+  /* Suaviza la animación de ancho */
+}
+
+.dropdown-menu li a:hover {
+  /*color: #59ec4c;*/
+  color: white;
+  /* Cambia el color del texto al pasar el mouse */
+}
+
+.dropdown-menu li a:hover::after {
+  width: 100%;
+  /* La barra se expande completamente */
+}
+
+
+/* Mostrar el menú cuando se activa */
+.dropdown-menu.show {
+  display: block;
+}
+
+.menu-container:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  /* Aparece */
+  transform: translateY(0);
+  /* Sin desplazamiento */
+}
+
+
+
+
+
+/* Ajuste general para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Ocultar el navbar tradicional */
+  .navbar {
+    display: none;
+  }
+
+  /* Mostrar el botón del menú móvil */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    position: absolute; /* Asegura que esté sobre el contenido */
+    top: 64px; /* Justo debajo del header */
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+  }
+
+  /* Estilo de los botones dentro del menú móvil */
+  .mobile-menu button {
+    color: white; /* Texto blanco */
+    text-align: left; /* Alineación del texto */
+    background: none; /* Sin fondo adicional */
+    border: none; /* Sin bordes */
+    font-size: 18px; /* Tamaño de texto más grande */
+    padding: 0.8rem 1rem; /* Espaciado interno */
+    margin: 0.2rem 0; /* Espaciado entre botones */
+    cursor: pointer; /* Indicador de clic */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza transiciones */
+    border-radius: 50px;
+  }
+
+  .mobile-menu button:hover {
+    /*background-color: #2eff05;  Color de fondo al pasar el mouse */
+    background-color: white;
+    border-radius: 50px;
+    color: #000; /* Texto negro para contraste */
+  }
+
+  /* Animación de apertura */
+  .mobile-menu {
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px); /* Comienza desplazado hacia arriba */
+      opacity: 0; /* Invisible al inicio */
+    }
+    to {
+      transform: translateY(0); /* En posición original */
+      opacity: 1; /* Completamente visible */
+    }
+  }
+}
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block; /* Botón de toggle visible */
+  }
+
+  .navbar {
+    display: none; /* Oculta el navbar principal */
+  }
+
+  .mobile-menu button {
+    font-size: 16px; /* Ajusta tamaño de texto */
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
+
+/* Ajuste del contenido debajo del header */
+body {
+  padding-top: 80px;
+}
+
+/* Animación de gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Estilo del footer con gradiente animado */
+.animacion-bg {
+  padding: 20em 1em;
+  background: linear-gradient(90deg, #1e3c72, #2a5298, #004e92, #0f2b5e);
+  background-size: 200% 200%;
+  /* Tamaño más grande para notar el movimiento */
+  animation: gradientAnimation 3s ease infinite;
+  /* Duración más corta para hacer la animación más visible */
+  color: white;
+  /* Texto en blanco */
+  padding: 2rem 1rem;
+  /* Espaciado interno */
+  text-align: center;
+  /* Centrar el texto */
+}
+
+
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 2560px) {
+  .header {
+    position: fixed; /* Fija el header en móviles */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(93, 93, 182, 0.7); /* Fondo semi-transparente */
+  }
+
+  .sticky-header {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro al hacer scroll */
+  }
+
+  body {
+    padding-top: 60px; /* Ajusta el padding-top para móviles */
+  }
+}

@@ -1,0 +1,267 @@
+<main class="container-fluid text-center">
+  <div class="row">
+
+    <div class="principal-container">
+
+      <!-- Fondo con imagen -->
+      <div class="principal-header">
+        <img class="logo" src="assets/LOGO.png" alt="Logo de la empresa"> <!-- Logo -->
+        <div class="button-container">
+          <button (click)="irALI()" class="buttonIndex button_LI">Limpieza Integral</button>
+          <button (click)="irAMS()" class="buttonIndex button_MS">Mantenimiento Sanitario</button>
+          <button (click)="irAME()" class="buttonIndex button_ME">Mantenimiento Edilicio</button>
+        </div>
+      </div>
+
+
+
+      <!-- Contenido principal -->
+      <div class="row principal-bg">
+
+        <div class="col-4 principal-companyContenet">
+          <mat-icon>ligature</mat-icon>
+          <h1>Profesionales en servicios de limpieza integral, mantenimiento sanitario y edilicio.</h1>
+          <p>
+            En <strong>PROLIMP</strong> ponemos profesionales a tu disposición para brindarte el servicio acorde a tu
+            necesidad.
+            Ofreciéndote soluciones para edificios de vivienda, comercios y particulares.
+          </p>
+        </div>
+
+        <div class="row col-8 principal_itemContainer">
+          <div class="col principal_item">
+            <div class="principal_item-iconContainer">
+              <mat-icon class="matIcon">home</mat-icon>
+            </div>
+            <h2>Tratamos tu espacio como nuestro Hogar</h2>
+            <p>Nuestros equipos de trabajo están capacitados profesionalmente para la tarea, el uso de maquinaria,
+              productos y el trato directo con el cliente.</p>
+          </div>
+
+          <div class="col principal_item">
+            <div class="principal_item-iconContainer">
+              <mat-icon class="matIcon">nature icon</mat-icon>
+            </div>
+            <h2>Cuidado del Medio Ambiente</h2>
+            <p>Nosotros como empresa estamos comprometidos con el presente y las generaciones futuras. Por lo que
+              utilizamos técnicas y productos que sean amigables con el medio ambiente.</p>
+          </div>
+
+          <div class="col principal_item">
+            <div class="principal_item-iconContainer">
+              <mat-icon class="matIcon">edit icon</mat-icon>
+            </div>
+            <h2>Cotizaciones sin costos y en 24hs</h2>
+            <p>Te daremos un presupuesto ajustado a su necesidad, sin costos y en menos de 24hs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Nuestros Servicios -->
+    <div class="row servis_container">
+      <h2 class="servis_title fade-in">NUESTRO SERVICIOS</h2>
+      <div class="row servis_itemsContainer">
+
+        <!-- 1º Col -->
+        <div class="col fade-in">
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpieza de hogares</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpiezas de edificios</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpieza de locales comerciales</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpieza de oficinas</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpieza de baños públicos</p>
+          </div>
+        </div>
+
+        <!-- 2º Col -->
+        <div class="col fade-in">
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpiezas de cañerias primarias y pluviales</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Desobstrucciones</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Filmacion de cañerias</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpieza de tanques de agua</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpieza de cocinas industriales</p>
+          </div>
+        </div>
+
+        <!-- 3º Col -->
+        <div class="col fade-in">
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Reparación y mantenimiento de fachadas</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Trabajos en yeso y pladur</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Instalación de revestimientos</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Limpieza de alfombras y tapicería</p>
+          </div>
+
+          <div class="servis_item">
+            <p><mat-icon>done outline icon</mat-icon> Reparación de grietas y humedades</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Metodo de trabajo hidden-->
+    <div class="row metodo-trabajo">
+
+      <h2 class="metodo-trabajo_title">NUESTRO METODO DE TRABAJO</h2>
+      <div class="row metodo-trabajo_pasos">
+        <!--1-->
+        <!--<div class="col metodo-trabajo_item" data-aos="slide-left" data-aos-delay="0" data-aos-duration="400">-->
+        <div class="col metodo-trabajo_item" id="animado">
+          <img src="assets/uno.png" alt="">
+          <h3 class="metodo-trabajo_itemTitle">ANALIZAR</h3>
+          <p>Estudiamos tu caso, atendiendo tus consultas y necesidades.</p>
+        </div>
+
+        <!--2-->
+        <!--<div class="col metodo-trabajo_item" data-aos="slide-left" data-aos-delay="200" data-aos-duration="400">-->
+        <div class="col metodo-trabajo_item" id="animado">
+          <img src="assets/dos.png" alt="">
+          <h3 class="metodo-trabajo_itemTitle">ASESORAR</h3>
+          <p>Te asesoramos y armamos una propuesta a tu medida, flexible y 100% personalizada.</p>
+        </div>
+
+        <!--3-->
+        <div class="col metodo-trabajo_item" id="animado">
+          <img src="assets/tres.png" alt="">
+          <h3 class="metodo-trabajo_itemTitle">IMPLEMENTAR</h3>
+          <p>Ponemos en práctica la propuesta con equipos de trabajo altamente capacitados.</p>
+        </div>
+
+        <!--4-->
+        <div class="col metodo-trabajo_item" id="animado">
+          <img src="assets/cuatro.png" alt="">
+          <h3 class="metodo-trabajo_itemTitle">CONTROLAR</h3>
+          <p>Para brindar un servicio de calidad, los equipos de trabajo son supervisados permanente.</p>
+        </div>
+
+        <!--5-->
+        <div class="col metodo-trabajo_item" id="animado">
+          <img src="assets/cinco.png" alt="">
+          <h3 class="metodo-trabajo_itemTitle">FEEDBACK</h3>
+          <p>Valoramos positivamente la comunicación con nuestros clientes, generando una mejora continua en nuestros
+            procesos.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- https://depositphotos.com/photos/mision.html?filter=all&qview=669427934 -->
+
+
+    <!-- Misión, Visión y Valores hidden-->
+    <div class="row mission-vision-valores">
+      <div class="row mission-vision-valores_titleBg ">
+        <h2 class="mission-vision-valores_title">NOSOTROS</h2>
+      </div>
+
+      <div class="row mission-vision-valores_content">
+        <!-- Misión -->
+        <!--<div class="col mission-vision-valores_item mission" data-aos="fade-right"> -->
+        <div class="col mission-vision-valores_item mission fade-left">
+          <h3 class="mission-vision-valores_itemTitle">Misión</h3>
+          <mat-icon class="matIcon_size">assignment_ind</mat-icon>
+          <div class="mission-vision-valores_itemContent">
+            <p>Ser un proveedor de servicios que brinde soluciones eficaces, duraderas y de la más alta calidad.
+              Ofreciendo
+              a nuestros clientes rapidez, eficiencia, atención en el detalle, seguridad y la utilización de técnicas y
+              productos que sean amigables con el medio ambiente.</p>
+          </div>
+        </div>
+
+        <!-- Visión -->
+        <!--<div class="col mission-vision-valores_item vision" data-aos="zoom-in">-->
+        <div class="col mission-vision-valores_item vision fade-in">
+          <h3 class="mission-vision-valores_itemTitle">Visión</h3>
+          <mat-icon class="matIcon_size">visibility</mat-icon>
+          <div class="mission-vision-valores_itemContent">
+            <p>Posicionarnos como una empresa de referencia en zona metropolitana, fundamentando nuestro crecimiento
+              sobre
+              la base de nuestros valores, el cuidado ambiental y el relacionamiento con la comunidad.</p>
+          </div>
+        </div>
+
+        <!-- Valores -->
+        <!-- <div class="col mission-vision-valores_item valores" data-aos="fade-left" data-aos-offset="-200">-->
+        <div class="col mission-vision-valores_item valores fade-right">
+          <h3 class="mission-vision-valores_itemTitle">Valores</h3>
+          <mat-icon class="matIcon_size">stars</mat-icon>
+          <div class="mission-vision-valores_itemContent">
+            <p><strong>PROFESIONALISMO:</strong> personal altamente capacitado.</p>
+            <p><strong>CALIDAD:</strong> en el desarrollo de cada tarea.</p>
+            <p><strong>COMUNICACIÓN:</strong> permanente con nuestros clientes y colaboradores.</p>
+            <p><strong>INNOVACIÓN:</strong> constante en técnicas, productos y herramientas.</p>
+            <p><strong>SUSTENTABILIDAD:</strong> enfocándonos en nuestra responsabilidad social y ambiental.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Contenedor para los botones -->
+    <div class="floating-buttons" *ngIf="showScrollToTop">
+      <!-- Botón de scroll hacia arriba -->
+      <button class="scroll-to-top" (click)="scrollToTop()">
+        <mat-icon>arrow_upward</mat-icon>
+      </button>
+
+      <!-- Botón de WhatsApp -->
+      <a class="whatsapp-button" *ngIf="showScrollToTop" href="https://wa.me/59898442501" target="_blank">
+        <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+      </a>
+    </div>
+
+
+  </div>
+</main>

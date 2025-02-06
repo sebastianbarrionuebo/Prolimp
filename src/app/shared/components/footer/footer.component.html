@@ -1,0 +1,58 @@
+<footer class="container-fluid text-center">
+  <div class="row animacion-bg">
+    <div class="col-12 col-md-8">
+      <div class="row footer-titleContainer">
+        <img src="assets/miniLogo.png" alt="Logo" class="footer-logo">
+        <h1>Prolimp<span>.</span></h1>
+      </div>
+      <hr>
+      <div class="row footer-btnContainer">
+        <div class="col">
+          <button (click)="irASeccion('/Servicios/Limpieza-Integral')" mat-button>Limpieza Integral</button>
+        </div>
+        <div class="col">
+          <button (click)="irASeccion('/Servicios/Mantenimiento-Sanitario')" mat-button>Mantenimiento Sanitario</button>
+        </div>
+        <div class="col">
+          <button (click)="irASeccion('/Servicios/Mantenimiento-Sanitario/Filmacion-de-cañerias')" mat-button>Filmacion de Cañerias</button>
+        </div>
+        <div class="col">
+          <button (click)="irASeccion('/Servicios/Mantenimiento-Edilicio')" mat-button>Mantenimiento Edilicio</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="footer-contactContainer">
+        <h3 class="footer-contactContainer_title">Contáctanos:</h3>
+        <div class="footer-contactContainer_options">
+          <div class="row">
+            <p><fa-icon [icon]="faPhone"></fa-icon> +598 98 442 501</p>
+          </div>
+          <div class="row">
+            <p><fa-icon [icon]="faEnvelope"></fa-icon> prolimpuy&#64;gmail.com</p>
+          </div>
+
+          <div class="social-buttons">
+            <button mat-button (click)="irARedSocial('https://www.facebook.com')">
+              <fa-icon class="social-buttons_icon" [icon]="faFacebook"></fa-icon>
+            </button>
+            <button mat-button (click)="irARedSocial('https://www.instagram.com')">
+              <fa-icon class="social-buttons_icon" [icon]="faInstagram"></fa-icon>
+            </button>
+            <button mat-button (click)="irARedSocial('https://wa.me/59898442501')">
+              <fa-icon class="social-buttons_icon" [icon]="faWhatsapp"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="asist-container">
+    <div>
+      <p>¿Necesitas asistencia?</p>
+      <button (click)="irAContacto()" class="btn btn-dark">Contacatanos</button>
+    </div>
+  </div>
+</footer>

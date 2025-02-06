@@ -1,0 +1,113 @@
+<main class="container-fluid">
+
+  <!-- Fondo cabecera -->
+  <div class="row principal-header">
+    <h2 class="principal-header_title" id="tituloAnimado">MANTENIMINETO SANITARIO</h2>
+  </div>
+  <div class="row principal-bg">
+    <p>
+      MANTENIMIENTO QUE PREVIENE, SOLUCIONES QUE FUNCIONAN!.
+    </p>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- Mantenimiento Sanitario -->
+  <div class="row mantenimiento-sanitario_container">
+
+
+
+    <!-- Item 1 -->
+    <div class="row mantenimiento-sanitario_item fade-right">
+      <div class="col-6 mantenimiento-sanitario_itemContent">
+        <h2>Mantenimiento Sanitario</h2>
+        <p>En PROLIMP, ofrecemos soluciones integrales para el mantenimiento sanitario y la desobstrucción de cañerías.
+          Nuestro servicio incluye el desobstrucción eficiente y mantenimiento preventivo de sistemas de tuberías
+          mediante técnicas avanzadas, como el uso de cinta manual o eléctrica, garantizando un flujo óptimo y evitando
+          problemas futuros.</p>
+          <hr>
+          <app-social-buttons></app-social-buttons>
+      </div>
+      <div class="col-6 mantenimiento-sanitario_itemImg">
+        <img class="img-size" src="assets/Mantenimiento Sanitario/depositphotos2.jpg" alt="">
+        <!-- https://depositphotos.com/photo/top-view-cleaning-company-team-cleaning-modern-office-348553602.html -->
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Item 2 -->
+    <div class="row mantenimiento-sanitario_item fade-left">
+      <div class="col-6 mantenimiento-sanitario_itemImg">
+        <img class="img-size" src="assets/Mantenimiento Sanitario/rulo.jpg" alt="">
+      </div>
+      <div class="col-6 mantenimiento-sanitario_itemContent">
+        <h2>Desobstrucción de Cañerías</h2>
+        <p>Realizamos una limpieza exhaustiva de graseras, tanto individuales como colectivas, asegurando la eliminación
+          de residuos acumulados que puedan generar obstrucciones o malos olores. Este servicio es ideal para hogares,
+          edificios residenciales y empresas que buscan mantener un sistema de cañerías en perfecto estado.</p>
+          <hr>
+          <app-social-buttons></app-social-buttons>
+      </div>
+    </div>
+
+
+
+
+    <!-- Item 3 -->
+    <div class="row mantenimiento-sanitario_item fade-right">
+      <div class="col-6 mantenimiento-sanitario_itemContent">
+        <h2>Filmación de cañerías</h2>
+        <p>Ponemos a tu disposición tecnología para detectar y diagnosticar las patologías presentes en su sistema
+          sanitario.
+          Te brindamos la grabación y un informe técnico detallado.
+        </p>
+        <button (click)="irAFilmacionCanierias()" class="btn btn-primary fade-in">Conoce mas</button>
+        <hr>
+        <app-social-buttons></app-social-buttons>
+      </div>
+      <div class="col-6 mantenimiento-sanitario_itemImg">
+        <img class="img-size" src="assets/Fimacion Cañerias/istockphono.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- Contenedor para los botones -->
+    <div class="floating-buttons" *ngIf="showScrollToTop">
+      <!-- Botón de WhatsApp -->
+      <a class="whatsapp-button" *ngIf="showScrollToTop" href="https://wa.me/59898442501" target="_blank">
+        <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+      </a>
+    </div>
+
+
+
+
+    <!-- Item 4
+    <div class="row mantenimiento-sanitario_item" data-aos="fade-right">
+      <div class="col-6 mantenimiento-sanitario_itemContent">
+        <h2>Abonos Mensuales para tu Tranquilidad</h2>
+        <p>Para mayor comodidad y ahorro, contamos con planes de abonos mensuales diseñados a medida, ideales para
+          casas, edificios y empresas. Estos abonos incluyen visitas programadas para el mantenimiento preventivo,
+          evitando imprevistos y asegurando la funcionalidad continua de tus instalaciones.
+
+          Con nuestro equipo altamente capacitado y comprometido, puedes confiar en un servicio rápido, eficiente y
+          adaptado a tus necesidades. ¡Déjanos ayudarte a mantener tus cañerías limpias y funcionando a la perfección!
+        </p>
+      </div>
+      <div class="col-6 mantenimiento-sanitario_itemImg">
+        <img class="img-size" src="assets/Specialized-Services-768x512.jpg" alt="">
+      </div>
+    </div>
+    -->
+  </div>
+</main>

@@ -1,0 +1,256 @@
+
+
+
+
+/* Header */
+.principal-header {
+  background-image: url('/assets//Mantenimiento Sanitario/depositphotos7.jpg'); /* Ruta a tu imagen */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: bottom; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen al viewport */
+  height: 85vh; /* Asegura suficiente espacio */
+  display: flex; /* Para centrar contenido */
+  flex-direction: column; /* Coloca el logo y los botones en una columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra texto */
+  color: white;
+  padding: 2rem;
+  box-shadow: inset 0 0 0 1000px rgba(25, 34, 59, 0.5); /* Oscurece la imagen con un overlay */
+}
+
+.principal-header_title {
+  overflow: hidden;
+  padding: 0.5em 0em;
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.principal-bg {
+  background-color: rgb(24,75,115); /* Fondo semi-transparente */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 4rem;
+  margin: 0 auto;
+  border-end-end-radius: 8px;
+  color: white;
+  text-align: center;
+}
+.principal-bg p {
+  font-size: 2.5em;
+  /*word-spacing: 0.1em;*/
+  line-height: 1.1;
+  font-weight: 900;
+}
+/* Responsivo para pantallas*/
+@media (max-width: 1450px) {
+  .principal-header {
+    height: 65vh; /* Asegura suficiente espacio */
+  }
+}
+@media (max-width: 1025px) {
+  .principal-header {
+    height: 55vh; /* Asegura suficiente espacio */
+  }
+}
+@media (max-width: 425px) {
+  .principal-header_title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .principal-header {
+    background-position: center; /* Centra la imagen */
+    background-attachment: local; /* Fija la imagen al viewport */
+    height: 45vh; /* Asegura suficiente espacio */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mantenimiento Sanitario */
+.mantenimiento-sanitario_container {
+  overflow: hidden;
+  padding: 8em 0em;
+}
+
+.mantenimiento-sanitario_item {
+  padding: 5em 20em;
+}
+
+.mantenimiento-sanitario_itemContent {
+  display: flex; /* Para centrar contenido */
+  flex-direction: column; /* Coloca el logo y los botones en una columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  padding: 0em 5em;
+}
+.mantenimiento-sanitario_itemContent h2{
+  text-align: center;
+  font-size: 3em;
+  /*word-spacing: 0.1em;*/
+  line-height: 1.1;
+  font-weight: 900;
+  color: #184B73;
+}
+.mantenimiento-sanitario_itemContent p{
+  text-align: justify; /* Centra texto */
+  font-size: 1.4em;
+  word-spacing: 0.2em;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #184B73;
+}
+
+.mantenimiento-sanitario_subItemContent{
+  padding: 0.5em 0em;
+}
+.matIcon_padding{
+  font-size: 3rem; /* Aumenta el tamaño del ícono */
+  width: auto; /* Ajusta automáticamente el ancho */
+  height: auto; /* Ajusta automáticamente la altura */
+  color: #010db6; /* (Opcional) Cambia el color del ícono */
+}
+
+.mantenimiento-sanitario_itemImg {
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.img-size{
+  width: 100%;
+  height: 30rem; /* Ajusta la altura de las imágenes */
+  object-fit: cover; /* Cubre el contenedor manteniendo la proporción */
+}
+
+hr {
+  width: 100%;
+  border-color: rgb(11, 0, 170);
+}
+
+
+/* Responsivo para pantallas*/
+@media (max-width: 1450px) {
+  .mantenimiento-sanitario_item {
+    padding: 5em 5em;
+  }
+
+  .mantenimiento-sanitario_itemContent p{
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 1025px) {
+  .mantenimiento-sanitario_container {
+    padding: 4em 0em;
+  }
+
+  .mantenimiento-sanitario_item {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    padding: 6em 2em; /* Reduce el padding */
+  }
+
+  .mantenimiento-sanitario_itemContent {
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 0em 1em; /* Ajusta el padding */
+    order: 1; /* Coloca el contenido arriba */
+  }
+
+  .mantenimiento-sanitario_itemImg {
+    width: 100%; /* Ocupa todo el ancho */
+    order: 2; /* Coloca la imagen abajo */
+    margin-top: 2em; /* Espacio entre el contenido y la imagen */
+  }
+}
+
+@media (max-width: 425px) {
+  .mantenimiento-sanitario_itemContent p{
+    text-align: start; /* Centra texto */
+    padding-left: 0.5em;
+  }
+  .img-size{
+    height: auto; /* Ajusta la altura de las imágenes */
+  }
+
+  .btn {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 321px) {
+  .mantenimiento-sanitario_itemContent p{
+    padding-left: 0.8em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor de los botones flotantes */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25D366; /* Color verde de WhatsApp */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-button img {
+  width: 70%;
+  height: 70%;
+}
+
+.whatsapp-button:hover {
+  background-color: #1DA851; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.2); /* Efecto de agrandamiento */
+}

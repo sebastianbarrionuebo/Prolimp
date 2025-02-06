@@ -1,0 +1,69 @@
+
+
+.social-buttons {
+  display: flex;
+  flex-direction: column; /* Título arriba, botones abajo */
+  align-items: center; /* Centra los elementos */
+  gap: 0.5rem; /* Espacio entre el título y los botones */
+}
+
+.social-buttons_title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00319c; /* Color de los íconos */
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+/* Asegura que los botones estén en la misma fila */
+.social-buttons_container {
+  display: flex;
+  gap: 0.5rem; /* Espaciado entre botones */
+}
+
+/* Ajuste visual de los botones */
+.social-buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-buttons button:hover {
+  transform: scale(1.2);
+}
+
+/* Estilo de los íconos */
+.social-buttons_icon {
+  font-size: 2rem; /* Tamaño del ícono */
+  color: #00319c; /* Color de los íconos */
+}
+
+
+@media (max-width: 768px) {
+  footer mat-icon, .social-buttons_icon {
+    font-size: 1.5rem; /* Tamaño de los íconos más pequeño */
+  }
+
+  .social-buttons {
+    gap: 1rem;
+  }
+
+  .social-buttons button {
+    font-size: 1.5rem; /* Tamaño de los botones más pequeño */
+  }
+
+  /* Hacer los botones de contacto más grandes */
+  .social-buttons button:hover {
+    transform: scale(1.2); /* Efecto de hover más sutil */
+  }
+}
+@media (max-width: 425px) {
+  .social-buttons_title {
+    text-align: start;
+    font-size: 1.8rem;
+  }
+}
+
+
+

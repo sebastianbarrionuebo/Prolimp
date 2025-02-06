@@ -1,0 +1,144 @@
+<main class="container-fluid">
+
+  <!-- Fondo cabecera -->
+  <div class="row principal-header">
+    <h2 class="principal-header_title" id="tituloAnimado">LIMPIEZA INTEGRAL</h2>
+  </div>
+  <div class="row principal-bg">
+    <p>
+      BRINDAMOS UN SERVICIO RAPIDO, IDONEO Y EFICAZ.
+    </p>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- Limpieza integral -->
+  <div class="row limpieza-integral_container">
+
+
+
+    <!-- Item 1 -->
+    <div class="row limpieza-integral_item fade-right">
+      <div class="col-6 limpieza-integral_itemContent">
+        <h2>Soluciones Profesionales y Personalizadas para un Entorno Limpio y Saludable</h2>
+        <p>Nos especializamos en ofrecer soluciones profesionales y personalizadas para satisfacer todas tus necesidades
+          de limpieza. Contamos con un equipo altamente capacitado y comprometido con garantizar un entorno limpio,
+          seguro y saludable.</p>
+        <hr>
+        <app-social-buttons></app-social-buttons>
+      </div>
+      <div class="col-6 limpieza-integral_itemImg">
+        <img class="img-size" src="assets/Limpieza Integral/Equipo capacitado.jpg" alt="">
+        <!-- https://depositphotos.com/photo/top-view-cleaning-company-team-cleaning-modern-office-348553602.html -->
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Item 2 -->
+    <div class="row limpieza-integral_item fade-left">
+      <div class="col-6 limpieza-integral_itemImg">
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+          <div class="carousel">
+            <img class="carousel-image" src="assets/Limpieza Integral/Limpieza hogares.jpg" alt="Limpieza hogares">
+            <img class="carousel-image" src="assets/Limpieza Integral/Limpieza edificios.jpg" alt="Limpieza edificios">
+            <img class="carousel-image" src="assets/Limpieza Integral/Limpieza oficinas.jpg" alt="Limpieza oficinas">
+          </div>
+          <button class="carousel-prev" (click)="prevImage()">&#10094;</button>
+          <button class="carousel-next" (click)="nextImage()">&#10095;</button>
+        </div>
+
+      </div>
+      <div class="col-6 limpieza-integral_itemContent">
+        <h2>Limpieza Integral para Hogares, Oficinas y Espacios Corporativos</h2>
+        <div class="row limpieza-integral_subItemContent">
+          <div class="col-2">
+            <mat-icon class="matIcon_padding fade-in">stars</mat-icon>
+          </div>
+          <div class="col">
+            <p><strong>Hogares:</strong> Limpieza profunda y mantenimiento regular para que disfrutes de un espacio
+              cómodo y acogedor.</p>
+          </div>
+        </div>
+
+
+        <div class="row limpieza-integral_subItemContent">
+          <div class="col-2">
+            <mat-icon class="matIcon_padding fade-in">stars</mat-icon>
+          </div>
+          <div class="col">
+            <p><strong>Oficinas:</strong> Aseguramos un ambiente laboral impecable que favorezca la
+              productividad y el bienestar de tus empleados.</p>
+          </div>
+        </div>
+
+
+        <div class="row limpieza-integral_subItemContent">
+          <div class="col-2">
+            <mat-icon class="matIcon_padding fade-in">stars</mat-icon>
+          </div>
+          <div class="col">
+            <p><strong>Edificios de apartamentos:</strong> Gestionamos la limpieza de áreas comunes,
+              escaleras, ascensores y más, manteniendo una imagen impecable.</p>
+          </div>
+        </div>
+
+
+        <div class="row limpieza-integral_subItemContent">
+          <div class="col-2">
+            <mat-icon class="matIcon_padding fade-in">stars</mat-icon>
+          </div>
+          <div class="col">
+            <p><strong>Empresas y fábricas:</strong> Adaptamos nuestras soluciones a las necesidades
+              específicas de tu negocio, cumpliendo con los más altos estándares de higiene.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Item 3 -->
+    <div class="row limpieza-integral_item fade-right">
+      <div class="col-6 limpieza-integral_itemContent">
+        <h2>Compromiso Ecológico y Resultados Excepcionales en Limpieza</h2>
+        <p>Nuestro compromiso con el medio ambiente se refleja en el uso de técnicas innovadoras, equipamiento de última
+          generación y productos ecológicos que cuidan tanto de tu salud como del planeta.
+
+          Confía en Limpieza Integral para obtener resultados excepcionales y una atención al cliente de primera clase.
+          Transformamos los espacios en lugares más limpios y agradables para vivir y trabajar.</p>
+        <hr>
+        <app-social-buttons></app-social-buttons>
+      </div>
+      <div class="col-6 limpieza-integral_itemImg">
+        <img class="img-size" src="assets/Limpieza Integral/Specialized.jpg" alt="">
+      </div>
+    </div>
+
+
+
+    <!-- Contenedor para los botones -->
+    <div class="floating-buttons" *ngIf="showScrollToTop">
+      <!-- Botón de WhatsApp -->
+      <a class="whatsapp-button" *ngIf="showScrollToTop" href="https://wa.me/59898442501" target="_blank">
+        <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+      </a>
+    </div>
+
+  </div>
+</main>

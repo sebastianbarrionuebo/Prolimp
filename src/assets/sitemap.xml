@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página Principal -->
+  <url>
+    <loc>https://Prolimp.com/Home</loc>
+    <lastmod>2024-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Servicios -->
+  <url>
+    <loc>https://Prolimp.com/Servicios/Limpieza-Integral</loc>
+    <lastmod>2024-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://Prolimp.com/Servicios/Mantenimiento-Sanitario</loc>
+    <lastmod>2024-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://Prolimp.com/Servicios/Mantenimiento-Sanitario/Filmacion-de-cañerias</loc>
+    <lastmod>2024-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://Prolimp.com/Servicios/Mantenimiento-Edilicio</loc>
+    <lastmod>2024-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página de Contacto -->
+  <url>
+    <loc>https://Prolimp.com/Contactanos</loc>
+    <lastmod>2024-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
+

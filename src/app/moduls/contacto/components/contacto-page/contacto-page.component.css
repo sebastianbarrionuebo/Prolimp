@@ -1,0 +1,202 @@
+/* Estilo para el título principal */
+.main-title {
+  /*word-spacing: 0.1em;*/
+  color: #184B73;
+  padding: 4em 0em 1em;
+  font-size: 2.4rem; /* Tamaño moderado para el título */
+  font-weight: bold; /* Mantiene el título destacado */
+  margin-bottom: 1em; /* Espacio debajo del título */
+}
+
+/* Estilo para el párrafo de "Contáctenos" */
+.contact-info {
+  font-size: 1.4em !important;
+  word-spacing: 0.2em;
+  font-weight: 500;
+  color: #184B73;
+  margin-bottom: 1.5em; /* Espacio debajo del párrafo */
+  line-height: 1.5; /* Mejora la legibilidad */
+  padding: 0em 5em;
+}
+
+/* Ajustes de fuentes para pantallas grandes */
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 2.6rem; /* Ligero aumento del tamaño del título en pantallas grandes */
+  }
+
+  .contact-info {
+    font-size: 1.1rem; /* Ligero aumento del tamaño del párrafo en pantallas grandes */
+  }
+
+  .datos-contenedor {
+    padding: 0 6em; /* Menos espacio lateral */
+  }
+
+  /* Ajustes para pantallas grandes */
+  .col {
+    font-size: 1rem; /* Aseguramos un tamaño de fuente adecuado para pantallas grandes */
+    text-align: center; /* Asegura que el texto esté centrado en pantallas grandes */
+  }
+}
+
+
+
+.form-container {
+  padding: 1em 5em;
+}
+
+.datos-contenedor{
+  padding: 0 10em;
+}
+
+.mat-form-field {
+  width: 100% !important; /* Forzar ancho completo */
+  max-width: none !important; /* Permitir que ocupe todo el ancho */
+  margin-bottom: 15px;
+}
+
+/* Ajustes para pantallas extra pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .datos-contenedor {
+    padding: 0 1em; /* Muy poco espacio lateral en pantallas muy pequeñas */
+  }
+}
+
+
+
+
+/* Ajustar el tamaño del texto del error */
+.mat-form-field .mat-error {
+  font-size: 0.875rem; /* Tamaño más pequeño para los errores */
+  color: #f44336; /* Rojo para los errores */
+}
+
+/* Ajustar la apariencia cuando un campo tiene error */
+.mat-form-field.ng-invalid.mat-form-field-invalid .mat-form-field-outline {
+  border-color: #f44336 !important; /* Borde rojo */
+}
+
+/* Resaltar los campos válidos */
+.mat-form-field.ng-valid.mat-form-field-valid .mat-form-field-outline {
+  border-color: #4caf50 !important; /* Borde verde cuando el campo es válido */
+}
+
+/* Ajuste de tamaño de fuente en dispositivos pequeños */
+@media (max-width: 768px) {
+  .mat-form-field .mat-label {
+    font-size: 1rem; /* Etiqueta más pequeña */
+  }
+
+  .mat-form-field .mat-error {
+    font-size: 0.75rem; /* Error más pequeño */
+  }
+
+  .btn {
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    padding: 10px 20px; /* Ajustar el padding del botón */
+  }
+
+  .form-container {
+    padding: 1em 1em;
+  }
+
+  .datos-contenedor {
+    padding: 0 2em; /* Aún menos espacio lateral */
+  }
+}
+
+
+
+/* Contenedor principal */
+.col {
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 1em;
+}
+
+/* Estilos para los títulos */
+.miInfo-title {
+  /*word-spacing: 0.1em;*/
+  color: #184B73;
+  font-size: 2rem; /* Tamaño moderado para el título */
+  font-weight: bold; /* Mantiene el título destacado */
+  margin-bottom: 1em; /* Espacio debajo del título */
+}
+
+.miInfo-contenedor {
+  font-size: 1.4em !important;
+  word-spacing: 0.2em;
+  font-weight: 500;
+  color: #184B73;
+  margin-bottom: 1.5em; /* Espacio debajo del párrafo */
+  line-height: 1.5; /* Mejora la legibilidad */
+  padding: 0em 5em;
+}
+
+/* Estilo para los párrafos */
+p {
+  font-size: 1rem; /* Tamaño de fuente estándar para los párrafos */
+  margin: 0.5em 0; /* Espacio entre los párrafos */
+  display: flex;
+  align-items: center; /* Alineación vertical de los íconos con el texto */
+  justify-content: flex-start; /* Alinea los íconos con el texto a la izquierda */
+}
+
+/* Aseguramos que el contenedor de los párrafos no herede la alineación */
+.info-contenedor {
+  text-align: left; /* Alinea solo los párrafos a la izquierda */
+}
+
+/* Estilo para los iconos dentro de los párrafos */
+mat-icon {
+  margin-right: 0.5em; /* Espacio entre el icono y el texto */
+  font-size: 1.2rem; /* Tamaño de los iconos */
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 992px) {
+  .col {
+    font-size: 1rem; /* Aseguramos un tamaño de fuente adecuado para pantallas grandes */
+    text-align: center; /* Asegura que el texto esté centrado en pantallas grandes */
+  }
+}
+
+
+@media (max-width: 425px) {
+  .main-title {
+    padding: 3em 0em 0.5em;
+  }
+  .contact-info {
+    font-size: 1.6rem !important;
+    padding: 0em 1em;
+  }
+
+  .miInfo-contenedor {
+    padding: 0em 1em;
+  }
+
+  .miInfo-contenedor p{
+    text-align: start;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    /*word-spacing: 0.1em;*/
+    line-height: 1.1;
+    font-weight: 400;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
