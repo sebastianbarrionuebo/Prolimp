@@ -11,7 +11,7 @@
   background-size: cover; /* La imagen cubre todo el contenedor */
   background-position: bottom; /* Centra la imagen */
   background-attachment: fixed; /* Fija la imagen al viewport */
-  height: 60vh; /* Asegura suficiente espacio */
+  height: 65vh; /* Asegura suficiente espacio */
   display: flex; /* Para centrar contenido */
   flex-direction: column; /* Coloca el logo y los botones en una columna */
   justify-content: center; /* Centra verticalmente */
@@ -26,8 +26,7 @@
   overflow: hidden;
   padding: 0.5em 0em;
   color: white;
-  font-size: 70px;
-  font-weight: 700;
+  font-size: 70px !important;
 }
 
 .principal-bg {
@@ -40,33 +39,19 @@
   text-align: center;
 }
 .principal-bg p {
-  font-size: 2.5em;
-  /*word-spacing: 0.1em;*/
-  line-height: 1.1;
-  font-weight: 900;
+  font-size: 2.5em !important;
 }
 /* Responsivo para pantallas*/
-@media (max-width: 1450px) {
-  .principal-header {
-    height: 65vh; /* Asegura suficiente espacio */
-  }
-}
-@media (max-width: 1025px) {
+@media (max-width: 769px) {
   .principal-header {
     height: 55vh; /* Asegura suficiente espacio */
   }
 }
 @media (max-width: 425px) {
-  .principal-header_title {
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
   .principal-header {
     background-position: center; /* Centra la imagen */
     background-attachment: local; /* Fija la imagen al viewport */
-    height: 45vh; /* Asegura suficiente espacio */
+    height: 50vh; /* Asegura suficiente espacio */
   }
 }
 
@@ -101,18 +86,11 @@
 }
 .filmacion-canierias_itemContent h2{
   text-align: center;
-  font-size: 3em;
-  /*word-spacing: 0.1em;*/
-  line-height: 1.1;
-  font-weight: 900;
   color: #184B73;
 }
 .filmacion-canierias_itemContent p{
   text-align: justify; /* Centra texto */
-  font-size: 1.4em;
   word-spacing: 0.2em;
-  line-height: 1.4;
-  font-weight: 500;
   color: #184B73;
 }
 
@@ -165,10 +143,6 @@ hr {
 
   .filmacion-canierias_item {
     padding: 5em 5em;
-  }
-
-  .filmacion-canierias_itemContent p{
-    font-size: 1.7em;
   }
 }
 

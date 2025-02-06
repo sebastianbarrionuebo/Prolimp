@@ -8,7 +8,7 @@
   background-size: cover; /* La imagen cubre todo el contenedor */
   background-position: center; /* Centra la imagen */
   background-attachment: fixed; /* Fija la imagen al viewport */
-  height: 85vh; /* Asegura suficiente espacio */
+  height: 95vh; /* Asegura suficiente espacio */
   display: flex; /* Para centrar contenido */
   flex-direction: column; /* Coloca el logo y los botones en una columna */
   justify-content: center; /* Centra verticalmente */
@@ -23,7 +23,7 @@
   overflow: hidden;
   padding: 0.5em 0em;
   color: white;
-  font-size: 70px;
+  font-size: 70px !important;
   font-weight: 700;
 }
 
@@ -37,24 +37,22 @@
   text-align: center;
 }
 .principal-bg p {
-  font-size: 2.5em;
-  /*word-spacing: 0.1em;*/
+  font-size: 2.5em !important;
   line-height: 1.1;
   font-weight: 900;
 }
 
 /* Responsivo para pantallas*/
-@media (max-width: 1450px) {
+@media (max-width: 769px) {
   .principal-header {
-    height: 65vh; /* Asegura suficiente espacio */
-  }
-}
-@media (max-width: 1025px) {
-  .principal-header {
-    height: 55vh; /* Asegura suficiente espacio */
+    height: 85vh; /* Asegura suficiente espacio */
   }
 }
 @media (max-width: 425px) {
+  .principal-header {
+    height: 75vh; /* Asegura suficiente espacio */
+  }
+
   .principal-header_title {
     font-size: 50px;
     font-weight: 600;
@@ -100,7 +98,6 @@
 .limpieza-integral_itemContent h2{
   text-align: center;
   font-size: 3em;
-  /*word-spacing: 0.1em;*/
   line-height: 1.1;
   font-weight: 900;
   color: #184B73;

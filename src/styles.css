@@ -9,9 +9,9 @@
 
   /* Tamaño de fuentes */
   --size-text-principal: font-size: 3rem;     /* H1 */
-  --size-text-secundario: font-size: 2.25rem; /* H2 */
-  --size-text-tercero: font-size: 1.5rem;     /* H3 */
-  --size-text-cuarto: font-size: 1.125rem;    /* Parrafo */
+  --size-text-secundario: font-size: 2.5rem; /* H2 */
+  --size-text-tercero: font-size: 2rem;     /* H3 */
+  --size-text-cuarto: font-size: 1.2rem;    /* Parrafo */
   --size-text-quinto: font-size: 0.875rem;    /* Parrafo */
 }
 
@@ -66,28 +66,3 @@ small {
   line-height: 1.5;
   font-weight: 400;
 }
-
-/* Responsividad para móviles */
-/*
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  small {
-    font-size: 0.875rem;
-  }
-}
-*/

@@ -98,15 +98,10 @@ body, html {
 }
 
 .principal-header .content h1 {
-  font-size: 3rem;
-  /*
   margin-bottom: 1rem;
-  */
 }
 
 .principal-header .content p {
-  /*
-  font-size: 1.2rem;*/
   max-width: 800px;
   margin: 0 auto;
 }
@@ -119,11 +114,6 @@ body, html {
 }
 
 @media (max-width: 769px) {
-  /*
-  .principal-header h1 {
-    font-size: 2rem;
-  }*/
-
   .principal-header {
     height: 85vh; /* Asegura suficiente espacio */
   }
@@ -429,8 +419,9 @@ body, html {
 
 .servis_title {
   padding: 3em 0em;
-  /*
+
   color: white;
+  /*
   font-size: 40px;
   font-weight: 700;*/
 }
