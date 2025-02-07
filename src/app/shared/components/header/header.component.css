@@ -305,7 +305,7 @@ body {
 }
 
 .menu-container:hover .dropdown-menu {
-  display: block;
+  /*display: block;*/
   opacity: 1;
   /* Aparece */
   transform: translateY(0);
@@ -459,3 +459,31 @@ body {
     padding-top: 60px; /* Ajusta el padding-top para móviles */
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

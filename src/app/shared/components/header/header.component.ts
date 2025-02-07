@@ -1,69 +1,99 @@
-import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router'; // Importa NavigationEnd
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { ChangeDetectorRef } from '@angular/core';
+import { Subscription } from 'rxjs'; // Importa Subscription para manejar la suscripción
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   faWhatsapp = faWhatsapp;
 
-
-  onMenuOpened() {
-    throw new Error('Method not implemented.');
-  }
   isSticky = false;
   isMobileMenuOpen = false;
   isDropdownOpen = false;
 
-  constructor(private router: Router, private renderer: Renderer2) { }
+  @ViewChild('headerElement') headerElement!: ElementRef;
+  @ViewChild('dropdownMenu') dropdownMenu!: ElementRef;
+  @ViewChild('menuButton') menuButton!: ElementRef;
 
+  private routerSubscription!: Subscription; // Para manejar la suscripción al Router
 
+  constructor(
+    private router: Router,
+    private renderer: Renderer2,
+    private cdRef: ChangeDetectorRef
+  ) { }
+
+  ngOnInit(): void {
+    this.checkScroll();
+
+    // Suscribirse a los eventos de navegación
+    this.routerSubscription = this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Restablecer el estado del dropdown al cambiar de ruta
+        this.isDropdownOpen = false;
+        this.isMobileMenuOpen = false; // También puedes cerrar el menú móvil si lo deseas
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    // Limpiar la suscripción al destruir el componente
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
+  }
+
+  // Métodos de navegación
   irAContacto() {
-    this.router.navigate(["/Contactanos"])
+    this.router.navigate(["/Contactanos"]);
   }
   irALI() {
-    this.router.navigate(["/Servicios/Limpieza-Integral"])
+    this.router.navigate(["/Servicios/Limpieza-Integral"]);
   }
   irAMS() {
-    this.router.navigate(["/Servicios/Mantenimiento-Sanitario"])
+    this.router.navigate(["/Servicios/Mantenimiento-Sanitario"]);
   }
   irAFC() {
-    this.router.navigate(["/Servicios/Filmacion-de-cañerias"])
+    this.router.navigate(["/Servicios/Filmacion-de-cañerias"]);
   }
   irAME() {
-    this.router.navigate(["/Servicios/Mantenimiento-Edilicio"])
+    this.router.navigate(["/Servicios/Mantenimiento-Edilicio"]);
   }
   irARedSocial(ruta: string) {
     window.open(ruta, '_blank');
   }
-
-
   irAHome() {
-    this.router.navigate(["/home"])
+    this.router.navigate(["/home"]);
+  }
+
+  ngAfterViewInit(): void {
+    this.cdRef.detectChanges();
   }
 
   toggleMobileMenu() {
+    this.cdRef.detectChanges();
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
     if (!this.isMobileMenuOpen) {
       this.isDropdownOpen = false; // Cierra el dropdown si se cierra el menú móvil
     }
   }
 
-  // Toggle para mostrar/ocultar el menú desplegable
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
 
-  // Cierra el menú si el usuario hace clic fuera de él
   @HostListener('document:click', ['$event'])
   closeDropdown(event: MouseEvent) {
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    const menuButton = document.querySelector('.menu-button');
+    if (!this.dropdownMenu?.nativeElement || !this.menuButton?.nativeElement) return;
 
-    if (dropdownMenu && !dropdownMenu.contains(event.target as Node) && menuButton !== event.target) {
+    const clickedInsideDropdown = this.dropdownMenu.nativeElement.contains(event.target);
+    const clickedInsideButton = (event.target as HTMLElement).closest('.menu-button');
+    if (!clickedInsideDropdown && !clickedInsideButton) {
       this.isDropdownOpen = false;
     }
   }
@@ -87,10 +117,5 @@ export class HeaderComponent implements OnInit {
         this.renderer.removeClass(document.querySelector('header'), 'sticky-header');
       }
     }
-  }
-
-
-  ngOnInit(): void {
-    this.checkScroll();
   }
 }

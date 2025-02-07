@@ -741,10 +741,6 @@ body, html {
     width: 60em;
   }
 
-  .mission-vision-valores {
-    padding: 5em 0em;
-  }
-
   .mission-vision-valores_content {
     display: flex;
     flex-direction: column; /* Cambia la dirección a vertical */
